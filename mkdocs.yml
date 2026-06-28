@@ -1,7 +1,26 @@
-site_name: HCableAnalysis
+﻿site_name: HCableAnalysis
+site_description: Suspension Bridge Cable Analysis Framework
+site_author: Structural Simulation Lab
+repo_url: https://github.com/structuralsimulationlab/HCableAnalysis
 
 theme:
   name: material
 
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
 plugins:
   - search
+
+nav:
+  - Home: index.md
+  - Theory: theory.md
+  - Examples: examples.md
+  - Benchmark: benchmark.md
+  - Roadmap: roadmap.md

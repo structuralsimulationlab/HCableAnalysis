@@ -1,17 +1,26 @@
-# Welcome to MkDocs
+﻿# HCableAnalysis
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+A Suspension Bridge Cable Analysis Framework.
 
-## Commands
+## Features
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+- Shape Finding
+- Cable Theory
+- Excel Input
+- DXF Export
+- Ansys Export
+- Abaqus Export
 
-## Project layout
+## Examples
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Examples will be released soon.
+
+## Benchmark
+
+Benchmark with ANSYS and Abaqus.
+
+## Roadmap
+
+- v0.1: Shape Finding, Excel Input
+- v0.2: GUI
+- v0.3: Abaqus Export
