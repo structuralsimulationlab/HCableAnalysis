@@ -1,17 +1,22 @@
 site_name: HCableAnalysis
 site_description: A Suspension Bridge Cable Analysis Framework
 site_author: HCableAnalysis Team
-repo_url: https://github.com/HCableAnalysis/HCableAnalysis
+
+repo_url: https://github.com/structuralsimulationlab/HCableAnalysis
 
 theme:
   name: material
+
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.top
+    - content.code.copy
     - search.suggest
     - search.highlight
-    - content.code.copy
+
+plugins:
+  - search
 
 nav:
   - Home: index.md
@@ -24,4 +29,4 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
 
-copyright: Copyright &copy; 2026 HCableAnalysis
+copyright: Copyright © 2026 HCableAnalysis
