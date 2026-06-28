@@ -1,0 +1,37 @@
+/*
+ * HCableAnalysis — Extra Styles
+ * Minimal overrides for MkDocs Material theme.
+ * Only global styles that apply to all pages.
+ */
+
+.md-grid {
+  max-width: 960px;
+}
+
+.md-content__inner {
+  padding-top: 0;
+}
+
+.md-content__inner > :first-child {
+  margin-top: 0;
+}
+
+.md-content h1 {
+  margin-top: 0;
+}
+
+.md-content hr {
+  margin: 2.5rem 0;
+  border: none;
+  height: 1px;
+  background: #e0e0e0;
+}
+
+.md-content blockquote {
+  border-left: 3px solid var(--md-primary-fg-color);
+  background: #f5f5f5;
+  padding: 0.75rem 1.25rem;
+  margin: 1rem 0;
+  color: var(--md-typeset-color);
+  font-size: 0.9rem;
+}

@@ -1,14 +1,15 @@
 # Roadmap
 
-## v0.1
+## Implemented
 
 - Shape Finding
-- Excel Input
-
-## v0.2
-
+- DXF Export
 - GUI
-
-## v0.3
-
+- ANSYS Export
 - Abaqus Export
+
+## Planned
+
+- EngineeringCases
+- Visualization
+- ForwardAnalysis

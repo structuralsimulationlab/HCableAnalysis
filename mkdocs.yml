@@ -20,7 +20,8 @@ plugins:
 
 nav:
   - Home: index.md
+  - Documentation: Documentation.md
   - Theory: theory.md
-  - Examples: examples.md
+  - EngineeringCases: EngineeringCases.md
   - Benchmark: benchmark.md
   - Roadmap: roadmap.md
