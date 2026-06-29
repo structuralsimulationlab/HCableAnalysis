@@ -22,6 +22,8 @@ nav:
   - Home: index.md
   - Documentation: Documentation.md
   - Theory: theory.md
-  - EngineeringCases: EngineeringCases.md
+  - Engineering Cases:
+      - Overview: EngineeringCases/EngineeringCases.md
+      - Case 001 - Chacao Bridge: EngineeringCases/EngineeringCases001/EngineeringCases001.md
   - Benchmark: benchmark.md
   - Roadmap: roadmap.md
