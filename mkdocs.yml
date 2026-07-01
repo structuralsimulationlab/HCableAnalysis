@@ -25,5 +25,6 @@ nav:
   - Engineering Cases:
       - Overview: EngineeringCases/EngineeringCases.md
       - Case 001 - Chacao Bridge: EngineeringCases/EngineeringCases001/EngineeringCases001.md
+      - Case 003 - Huangjiaoping Bridge: EngineeringCases/EngineeringCases003/EngineeringCases003.md
   - Benchmark: benchmark.md
   - Roadmap: roadmap.md

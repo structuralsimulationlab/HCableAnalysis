@@ -1,147 +1,104 @@
-# Engineering Case 001
+# Engineering Case 001 — Chacao Suspension Bridge
 
-# Chacao Suspension Bridge (Chile) — Cable Shape Finding Analysis Using HCableAnalysis
+## 1. Project Overview
+
+The Chacao Suspension Bridge is one of the most significant long-span bridge projects currently under construction in South America. Located across the Chacao Channel in southern Chile, the bridge connects Chiloé Island with the Chilean mainland.
+
+The bridge adopts an asymmetric three-tower suspension bridge configuration with two unequal main spans, making it one of the world's most representative multi-span suspension bridges. Compared with conventional two-tower suspension bridges, its asymmetric structural system introduces greater challenges for cable shape finding, cable force equilibrium, and construction-stage analysis.
+
+This engineering case demonstrates the application of **HCableAnalysis** to three-dimensional cable modeling, nonlinear shape-finding analysis, unstressed cable length determination, and finite element model generation for a complex long-span suspension bridge.
+
+### Bridge Rendering
+
+![Bridge Rendering](./ChacaoBridge.png)
+
+### Bridge Layout
+
+![Bridge Layout](./ChacaoBridge-layout.png)
 
 ---
 
-## Project Overview
-
-The Chacao Suspension Bridge is one of the most significant long-span bridge projects currently under construction in South America. Located in southern Chile, the bridge crosses the Chacao Channel and connects Chiloé Island with the Chilean mainland.
-
-The bridge adopts an asymmetric three-tower suspension bridge configuration with two unequal main spans, making it one of the most challenging suspension bridge projects in terms of structural analysis, construction, and cable system design.
-
-After completion, it will become the largest suspension bridge in Latin America and one of the world's most representative multi-span suspension bridges.
-
----
-
-## Bridge Information
+## 2. Bridge Parameters
 
 | Item | Value |
 |------|------|
 | Project | Chacao Suspension Bridge |
 | Location | Chacao Channel, Chile |
 | Bridge Type | Three-Tower Suspension Bridge |
-| Total Length | Approximately 2750 m |
+| Total Length | Approximately 2,750 m |
 | Main Spans | 1155 m + 1055 m |
-| Deck | Four-lane Highway |
-| Structural Feature | Asymmetric Multi-span Suspension Bridge |
+| Structural Layout | Asymmetric Three-Tower Suspension Bridge |
+| Deck | Four-Lane Highway |
+| Sag Ratio | 1:9 |
 
 ---
 
-## Bridge Layout
+## 3. Engineering Challenges
 
-![Bridge Layout](./ChacaoBridge-layout.png)
+Compared with conventional suspension bridges, the Chacao Suspension Bridge presents greater numerical complexity due to its asymmetric multi-span structural configuration.
 
----
+The major engineering challenges include:
 
-## Project Rendering
+- Three-dimensional cable modeling.
+- Nonlinear cable shape-finding analysis.
+- Unstressed cable length determination.
+- Dead-load equilibrium of the multi-span cable system.
+- Automatic generation of finite element geometry.
 
-![Bridge Rendering](./ChacaoBridge.png)
-
----
-
-# Background
-
-Cable shape finding is the first and one of the most critical procedures in suspension bridge analysis.
-
-A reliable initial cable configuration is essential because it determines the unstressed cable length, initial cable force, sag profile, and equilibrium geometry used in subsequent finite element analyses.
-
-For large suspension bridges with asymmetric spans and multiple towers, numerical shape finding is considerably more difficult than that of conventional two-tower bridges due to the strong coupling between cable forces and geometry.
-
-HCableAnalysis provides an efficient numerical framework for solving this nonlinear equilibrium problem.
+HCableAnalysis automatically performs nonlinear equilibrium iterations to obtain the equilibrium cable configuration and unstressed cable length, providing reliable initial geometry for subsequent finite element analysis.
 
 ---
 
-# HCableAnalysis Workflow
+## 4. Analysis Workflow
 
-The overall workflow is summarized as follows:
+The complete analysis workflow consists of:
 
-1. Define bridge geometry.
-2. Generate cable discretization.
-3. Apply dead loads.
-4. Solve nonlinear cable equilibrium.
-5. Update cable coordinates iteratively.
-6. Check convergence.
-7. Export the final cable geometry.
-
-The solver automatically adjusts cable coordinates until the residual force satisfies the prescribed convergence tolerance.
+1. Cable parametric modeling.
+2. Cable discretization.
+3. Nonlinear cable shape-finding analysis.
+4. Unstressed cable length calculation.
+5. DXF geometry generation.
+6. Finite element model export.
+7. Numerical verification using ANSYS and Abaqus.
 
 ---
 
-# Numerical Analysis
+## 5. Numerical Verification
 
-The cable system was established according to publicly available bridge information.
+The generated cable geometry was independently verified using both **ANSYS** and **Abaqus**.
 
-The objective of this example is to demonstrate the capability of HCableAnalysis for suspension bridge cable shape finding rather than to reproduce the complete construction design.
+The comparison results demonstrate:
 
-Analysis assumptions include:
+- Consistent cable geometry between different finite element platforms.
+- Excellent agreement in displacement distributions.
+- Numerical differences within **10⁻⁵**, validating the accuracy and robustness of the generated equilibrium cable configuration.
 
-- Dead-load equilibrium only
-- Elastic cable behavior
-- Three-dimensional cable geometry
-- Nonlinear iterative solution
-- Automatic convergence control
+The results confirm that the cable model generated by HCableAnalysis can be directly used for subsequent structural analysis and construction-stage simulation.
 
 ---
 
-# Analysis Results
+## 6. Results
 
-The nonlinear shape-finding analysis converged successfully.
+### DXF Geometry
 
-Final convergence tolerance:
+The generated equilibrium cable geometry can be exported directly as a DXF file for CAD applications.
 
-```
-Residual = 1.0 × 10⁻⁵
-```
+![DXF Geometry](./ChacaoBridge.dxf)
 
-The obtained cable profile satisfies the equilibrium requirements under the specified dead load.
+### ANSYS Verification
 
-The resulting geometry can be directly exported for subsequent finite element modeling in commercial software such as ANSYS or Abaqus.
+Finite element verification using ANSYS shows excellent agreement with the cable geometry generated by HCableAnalysis.
 
----
+![ANSYS Result](./ChacaoBridge-ansys-1.jpg)
 
-# DXF Geometry
+### Abaqus Verification
 
-The generated cable geometry can be downloaded below.
+Independent verification using Abaqus further confirms the correctness of the generated cable configuration.
 
-**Download**
-
-👉 [ChacaoBridge.dxf](./ChacaoBridge.dxf)
-
-The DXF file contains the equilibrium cable profile after shape finding and can be imported into most CAD software.
+![Abaqus Result](./ChacaoBridge-abaqus-1.png)
 
 ---
 
-# Summary
+## 7. Software
 
-This engineering case demonstrates the application of HCableAnalysis to a representative long-span suspension bridge.
-
-The analysis successfully obtained the equilibrium cable configuration with a convergence accuracy of **1 × 10⁻⁵**, illustrating the robustness and numerical stability of the HCableAnalysis framework.
-
-The resulting cable geometry can serve as the initial configuration for further finite element analyses, including structural analysis, construction stage simulation, and bridge system modeling.
-
----
-
-# References
-
-The bridge dimensions and general project information presented in this example are compiled from publicly available information released by the Chilean Ministry of Public Works and project participants.
-
-This case study is intended solely as a demonstration of HCableAnalysis capabilities and does not represent the official design model of the project.
-
----
-
-**Software**
-
-HCableAnalysis
-
-**Analysis Type**
-
-Cable Shape Finding
-
-**Status**
-
-Converged ✓
-
-**Convergence Tolerance**
-
-1 × 10⁻⁵
+This engineering case was completed using **HCableAnalysis**, including cable parametric modeling, nonlinear shape-finding analysis, unstressed cable length calculation, DXF geometry generation, finite element model export, and numerical verification using ANSYS and Abaqus.
